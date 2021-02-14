@@ -39,8 +39,6 @@ int useCreat(char* filename, mode_t mode)
         
     }
     
-    close(file_descriptor);
-    
     return file_descriptor;
 }
 

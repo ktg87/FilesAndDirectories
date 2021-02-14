@@ -6,7 +6,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    int rc = 0; //Return code
+    int file_descriptor = 0; //Return code
     char filename[255];
     char functionChoice;
     
@@ -24,20 +24,20 @@ int main(int argc, const char * argv[]) {
    {
       case 'c' :
            printf("You chose to create a file.\n" );
-           rc = useCreat(filename, mode);
+           file_descriptor = useCreat(filename, mode);
            break;
       case 'o' :
            printf("You chose to open a file.\n" );
            /* We are going to attempt to open the file that we just created */
            mode = O_RDONLY;
-           rc = useOpen(filename, mode);
+           file_descriptor = useOpen(filename, mode);
            break;
       default :
            printf("Invalid choice.  Defaulting to creat.\n" );
-           rc = useCreat(filename, mode);        
+           file_descriptor = useCreat(filename, mode);
    } //end switch
     
-    if(rc != -1)
+    if(file_descriptor != -1)
     {
         printf("It worked!  We were able to complete your request for %s\n", filename);
     }
@@ -45,6 +45,17 @@ int main(int argc, const char * argv[]) {
     {
         printf("Failed to complete your request %s\n", filename);
     }
+    
+    int rc = 0;
+    
+    rc = close(file_descriptor); //Utilizing the close system call to close the file that we openned or created.
+    
+    if(rc != 0)
+    {
+        printf("Failed to close file!\n");
+    }
+    
+    printf("Successfully closed file!\n");
     
     return 0;
 }
