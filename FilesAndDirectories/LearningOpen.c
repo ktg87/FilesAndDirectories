@@ -5,6 +5,7 @@
 
 #include "LearningOpen.h"
 #include <fcntl.h>
+#include <unistd.h>
 #include <errno.h>
 
 int useOpen(char* filename, mode_t mode)
@@ -21,6 +22,7 @@ int useOpen(char* filename, mode_t mode)
     if (file_descriptor != -1)
     {
         printf("%s Opened with Read Only Permission!\n", filename);
+        close(file_descriptor);
     }
     else
     {

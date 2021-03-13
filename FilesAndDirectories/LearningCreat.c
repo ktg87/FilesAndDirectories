@@ -3,6 +3,7 @@
 //  FilesAndDirectories
 //
 #include "LearningCreat.h"
+#include "LearningWrite.h"
 #include <fcntl.h>
 #include <sys/syslimits.h>
 #include <unistd.h>
@@ -25,19 +26,19 @@ int useCreat(char* filename, mode_t mode)
         char filePath[PATH_MAX];
         if (fcntl(file_descriptor, F_GETPATH, filePath) != -1)
         {
-            // do something with the file path
             printf("Here is the filePath: %s\n", filePath);
         }
         else
         {
-            printf("Here is the filePath: %s\n", filePath);
+            printf("Unable to get filePath\n");
         }
     }
     else
     {
         printf("Unable to Create the File: %s.  Returned error: %d\n", filename, file_descriptor);
-        
     }
+    
+    close(file_descriptor);
     
     return file_descriptor;
 }
