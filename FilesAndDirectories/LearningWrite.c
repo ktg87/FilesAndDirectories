@@ -27,7 +27,7 @@ int useWrite(char* filename, mode_t mode)
     // User Input to write into a File.
     scanf("%[^\n]%*c", content);
     size_t size = write(file_descriptor, content, strlen(content));
-    printf("%lu", size);
+    printf("%lu bytes written.\n", size);
     close(file_descriptor);
     return 0;
 }
