@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "LearningCreat.h"
+#include "LearningChmod.h"
 #include "LearningOpen.h"
 #include "LearningRead.h"
 #include "LearningWrite.h"
@@ -25,7 +26,7 @@ int main(int argc, const char * argv[]) {
         scanf("%s", filename);
         getchar(); //added this to capture the newline char.
         
-        printf("Which function would you like to try?\n(o)pen\n(c)reat\n(r)ead\n(w)rite\n");
+        printf("Which function would you like to try?\n(o)pen\n(c)reat\n(r)ead\n(w)rite\nchange (p)ermissions\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -43,6 +44,10 @@ int main(int argc, const char * argv[]) {
                 /* We are going to attempt to open the file that we just created */
                 mode = O_RDONLY;
                 rc = useOpen(filename, mode); //Here rc is the filedescriptor
+                break;
+            case 'p' :
+                printf("You chose to change permissions to a file.\n");
+                rc = useChmod(filename); //Here rc is just a success or failure
                 break;
             case 'r' :
                 printf("You chose to read a file.\n");
@@ -78,6 +83,7 @@ int main(int argc, const char * argv[]) {
         {
             case 'y' :
                 //loop will continue
+                //TODO: figure out why this option doesn't work after changing permissions
                 break;
             case 'n' :
                 printf("Thank you and goodbye.\n" );
