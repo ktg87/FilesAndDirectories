@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include "LearningAccess.h"
 #include "LearningCreat.h"
 #include "LearningChmod.h"
 #include "LearningOpen.h"
@@ -26,7 +27,7 @@ int main(int argc, const char * argv[]) {
         scanf("%s", filename);
         getchar(); //added this to capture the newline char.
         
-        printf("Which function would you like to try?\n(o)pen\n(c)reat\n(r)ead\n(w)rite\nchange (p)ermissions\n");
+        printf("Which function would you like to try?\n(o)pen\n(c)reat\n(r)ead\n(w)rite\nchange (p)ermissions\ncheck (a)ccess\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -35,6 +36,10 @@ int main(int argc, const char * argv[]) {
 
         switch(functionChoice)
         {
+            case 'a' :
+                printf("You chose to check a file's access permissions.\n" );
+                rc = useAccess(filename); //Here rc is the filedescriptor
+                break;
             case 'c' :
                 printf("You chose to create a file.\n" );
                 rc = useCreat(filename, mode); //Here rc is the filedescriptor

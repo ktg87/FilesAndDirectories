@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		589BF506260BBE8A009D5F64 /* LearningAccess.c in Sources */ = {isa = PBXBuildFile; fileRef = 589BF505260BBE8A009D5F64 /* LearningAccess.c */; };
 		58A1553925E130F300D0FFEA /* LearningRead.c in Sources */ = {isa = PBXBuildFile; fileRef = 58A1553825E130F300D0FFEA /* LearningRead.c */; };
 		58A3C9CD260A86B90008B06F /* LearningChmod.c in Sources */ = {isa = PBXBuildFile; fileRef = 58A3C9CC260A86B90008B06F /* LearningChmod.c */; };
 		58A4838125EA6B4D00F56568 /* LearningWrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 58A4838025EA6B4D00F56568 /* LearningWrite.c */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		589BF504260BBE8A009D5F64 /* LearningAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningAccess.h; sourceTree = "<group>"; };
+		589BF505260BBE8A009D5F64 /* LearningAccess.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningAccess.c; sourceTree = "<group>"; };
 		58A1553725E130F300D0FFEA /* LearningRead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRead.h; sourceTree = "<group>"; };
 		58A1553825E130F300D0FFEA /* LearningRead.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningRead.c; sourceTree = "<group>"; };
 		58A3C9CB260A86B90008B06F /* LearningChmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningChmod.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				58A4838025EA6B4D00F56568 /* LearningWrite.c */,
 				58A3C9CB260A86B90008B06F /* LearningChmod.h */,
 				58A3C9CC260A86B90008B06F /* LearningChmod.c */,
+				589BF504260BBE8A009D5F64 /* LearningAccess.h */,
+				589BF505260BBE8A009D5F64 /* LearningAccess.c */,
 			);
 			path = FilesAndDirectories;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				58A4838125EA6B4D00F56568 /* LearningWrite.c in Sources */,
 				58A3C9CD260A86B90008B06F /* LearningChmod.c in Sources */,
 				58B5845B25C8288300B96478 /* LearningCreat.c in Sources */,
+				589BF506260BBE8A009D5F64 /* LearningAccess.c in Sources */,
 				58A1553925E130F300D0FFEA /* LearningRead.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
