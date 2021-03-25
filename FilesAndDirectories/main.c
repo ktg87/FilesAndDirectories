@@ -6,6 +6,7 @@
 #include "LearningChmod.h"
 #include "LearningOpen.h"
 #include "LearningRead.h"
+#include "LearningSymlink.h"
 #include "LearningWrite.h"
 
 int main(int argc, const char * argv[]) {
@@ -27,7 +28,14 @@ int main(int argc, const char * argv[]) {
         scanf("%s", filename);
         getchar(); //added this to capture the newline char.
         
-        printf("Which function would you like to try?\n(o)pen\n(c)reat\n(r)ead\n(w)rite\nchange (p)ermissions\ncheck (a)ccess\n");
+        printf("Which function would you like to try? \
+               \n(o)pen \
+               \n(c)reat \
+               \n(r)ead \
+               n(w)rite \
+               \n(p)ermissions \
+               \n(a)ccess \
+               \n(s)oft link\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -59,6 +67,10 @@ int main(int argc, const char * argv[]) {
                 /* We will need to open the file first before we read it. This will be done in the function*/
                 mode = O_RDONLY;
                 rc = useRead(filename, mode); //Here rc is just a success or failure
+                break;
+            case 's' :
+                printf("You chose to create a soft link for a file.\n");
+                rc = useSymlink(filename); //Here rc is just a success or failure
                 break;
             case 'w' :
                 printf("You chose to write to a file.\n");
