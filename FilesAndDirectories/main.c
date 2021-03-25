@@ -7,6 +7,7 @@
 #include "LearningOpen.h"
 #include "LearningRead.h"
 #include "LearningSymlink.h"
+#include "LearningUnlink.h"
 #include "LearningWrite.h"
 
 int main(int argc, const char * argv[]) {
@@ -32,10 +33,11 @@ int main(int argc, const char * argv[]) {
                \n(o)pen \
                \n(c)reat \
                \n(r)ead \
-               n(w)rite \
+               \n(w)rite \
                \n(p)ermissions \
                \n(a)ccess \
-               \n(s)oft link\n");
+               \n(s)oft link \
+               \n(u)nlink\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -71,6 +73,10 @@ int main(int argc, const char * argv[]) {
             case 's' :
                 printf("You chose to create a soft link for a file.\n");
                 rc = useSymlink(filename); //Here rc is just a success or failure
+                break;
+            case 'u' :
+                printf("You chose to unlink a soft link for a file.\n");
+                rc = useUnlink(filename); //Here rc is just a success or failure
                 break;
             case 'w' :
                 printf("You chose to write to a file.\n");
