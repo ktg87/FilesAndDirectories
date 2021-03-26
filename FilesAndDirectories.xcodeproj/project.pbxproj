@@ -13,6 +13,10 @@
 		58A4838125EA6B4D00F56568 /* LearningWrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 58A4838025EA6B4D00F56568 /* LearningWrite.c */; };
 		58AE5E15260CFB8B00C62EB3 /* LearningSymlink.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E14260CFB8B00C62EB3 /* LearningSymlink.c */; };
 		58AE5E19260D1FEF00C62EB3 /* LearningUnlink.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E18260D1FEF00C62EB3 /* LearningUnlink.c */; };
+		58AE5E1D260D259500C62EB3 /* LearningLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E1C260D259500C62EB3 /* LearningLink.c */; };
+		58AE5E21260E66CD00C62EB3 /* LearningMkdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E20260E66CD00C62EB3 /* LearningMkdir.c */; };
+		58AE5E25260E697F00C62EB3 /* LearningRmdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E24260E697F00C62EB3 /* LearningRmdir.c */; };
+		58AE5E29260E6C6900C62EB3 /* LearningGetcwd.c in Sources */ = {isa = PBXBuildFile; fileRef = 58AE5E28260E6C6900C62EB3 /* LearningGetcwd.c */; };
 		58B57CD325BDA6D500E97F30 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 58B57CD225BDA6D500E97F30 /* main.c */; };
 		58B5845B25C8288300B96478 /* LearningCreat.c in Sources */ = {isa = PBXBuildFile; fileRef = 58B5845A25C8288300B96478 /* LearningCreat.c */; };
 		58B5845F25C82F6E00B96478 /* LearningOpen.c in Sources */ = {isa = PBXBuildFile; fileRef = 58B5845E25C82F6E00B96478 /* LearningOpen.c */; };
@@ -43,6 +47,14 @@
 		58AE5E14260CFB8B00C62EB3 /* LearningSymlink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningSymlink.c; sourceTree = "<group>"; };
 		58AE5E17260D1FEF00C62EB3 /* LearningUnlink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningUnlink.h; sourceTree = "<group>"; };
 		58AE5E18260D1FEF00C62EB3 /* LearningUnlink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningUnlink.c; sourceTree = "<group>"; };
+		58AE5E1B260D259500C62EB3 /* LearningLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningLink.h; sourceTree = "<group>"; };
+		58AE5E1C260D259500C62EB3 /* LearningLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningLink.c; sourceTree = "<group>"; };
+		58AE5E1F260E66CD00C62EB3 /* LearningMkdir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningMkdir.h; sourceTree = "<group>"; };
+		58AE5E20260E66CD00C62EB3 /* LearningMkdir.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningMkdir.c; sourceTree = "<group>"; };
+		58AE5E23260E697F00C62EB3 /* LearningRmdir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningRmdir.h; sourceTree = "<group>"; };
+		58AE5E24260E697F00C62EB3 /* LearningRmdir.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningRmdir.c; sourceTree = "<group>"; };
+		58AE5E27260E6C6900C62EB3 /* LearningGetcwd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningGetcwd.h; sourceTree = "<group>"; };
+		58AE5E28260E6C6900C62EB3 /* LearningGetcwd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LearningGetcwd.c; sourceTree = "<group>"; };
 		58B57CCF25BDA6D500E97F30 /* FilesAndDirectories */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FilesAndDirectories; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B57CD225BDA6D500E97F30 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		58B5845925C8288300B96478 /* LearningCreat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningCreat.h; sourceTree = "<group>"; };
@@ -98,6 +110,14 @@
 				58AE5E14260CFB8B00C62EB3 /* LearningSymlink.c */,
 				58AE5E17260D1FEF00C62EB3 /* LearningUnlink.h */,
 				58AE5E18260D1FEF00C62EB3 /* LearningUnlink.c */,
+				58AE5E1B260D259500C62EB3 /* LearningLink.h */,
+				58AE5E1C260D259500C62EB3 /* LearningLink.c */,
+				58AE5E1F260E66CD00C62EB3 /* LearningMkdir.h */,
+				58AE5E20260E66CD00C62EB3 /* LearningMkdir.c */,
+				58AE5E23260E697F00C62EB3 /* LearningRmdir.h */,
+				58AE5E24260E697F00C62EB3 /* LearningRmdir.c */,
+				58AE5E27260E6C6900C62EB3 /* LearningGetcwd.h */,
+				58AE5E28260E6C6900C62EB3 /* LearningGetcwd.c */,
 			);
 			path = FilesAndDirectories;
 			sourceTree = "<group>";
@@ -163,9 +183,13 @@
 				58B5845F25C82F6E00B96478 /* LearningOpen.c in Sources */,
 				58A4838125EA6B4D00F56568 /* LearningWrite.c in Sources */,
 				58AE5E19260D1FEF00C62EB3 /* LearningUnlink.c in Sources */,
+				58AE5E29260E6C6900C62EB3 /* LearningGetcwd.c in Sources */,
 				58A3C9CD260A86B90008B06F /* LearningChmod.c in Sources */,
 				58B5845B25C8288300B96478 /* LearningCreat.c in Sources */,
+				58AE5E1D260D259500C62EB3 /* LearningLink.c in Sources */,
 				589BF506260BBE8A009D5F64 /* LearningAccess.c in Sources */,
+				58AE5E21260E66CD00C62EB3 /* LearningMkdir.c in Sources */,
+				58AE5E25260E697F00C62EB3 /* LearningRmdir.c in Sources */,
 				58A1553925E130F300D0FFEA /* LearningRead.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

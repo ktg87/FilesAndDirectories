@@ -4,8 +4,12 @@
 #include "LearningAccess.h"
 #include "LearningCreat.h"
 #include "LearningChmod.h"
+#include "LearningGetcwd.h"
+#include "LearningLink.h"
+#include "LearningMkdir.h"
 #include "LearningOpen.h"
 #include "LearningRead.h"
+#include "LearningRmdir.h"
 #include "LearningSymlink.h"
 #include "LearningUnlink.h"
 #include "LearningWrite.h"
@@ -31,13 +35,17 @@ int main(int argc, const char * argv[]) {
         
         printf("Which function would you like to try? \
                \n(o)pen \
-               \n(c)reat \
+               \t(c)reat \
                \n(r)ead \
-               \n(w)rite \
+               \t(w)rite \
                \n(p)ermissions \
-               \n(a)ccess \
+               \t(a)ccess \
                \n(s)oft link \
-               \n(u)nlink\n");
+               \t(u)nlink \
+               \n(l)ink \
+               \t(m)akedir \
+               \n(d)elete dir \
+               \t(g)et cwd\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -53,6 +61,22 @@ int main(int argc, const char * argv[]) {
             case 'c' :
                 printf("You chose to create a file.\n" );
                 rc = useCreat(filename, mode); //Here rc is the filedescriptor
+                break;
+            case 'd' :
+                printf("You chose to delete a directory.\n" );
+                rc = useRmdir(filename); //Here rc is the filedescriptor
+                break;
+            case 'g' :
+                printf("You chose to get the current working directory.\n");
+                rc = useGetcwd(); //Here rc is just a success or failure
+                break;
+            case 'l' :
+                printf("You chose to create a soft link for a file.\n");
+                rc = useLink(filename); //Here rc is just a success or failure
+                break;
+            case 'm' :
+                printf("You chose to make a new directory.\n");
+                rc = useMkdir(filename); //Here rc is just a success or failure
                 break;
             case 'o' :
                 printf("You chose to open a file.\n" );

@@ -23,7 +23,7 @@ int useSymlink(const char *filepath)
     // 0 ---> On Success || -1 ---> If Any Error Occurs
     if(link_status == 0)
     {
-        printf("Soft link is Created Successfully.!\n");
+        printf("Soft link Created Successfully!\n");
         
     }
     else
