@@ -10,9 +10,9 @@
 
 int useGetcwd()
 {
-    char newDirectory[100];
-    getcwd(newDirectory, 100);
-    printf("Current Working Directory: %s\n", newDirectory);
+    char currentDir[1024];
+    getcwd(currentDir, sizeof(currentDir));
+    printf("Current Working Directory: %s\n", currentDir);
     
     return 0;
     
