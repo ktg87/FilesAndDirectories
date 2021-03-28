@@ -3,7 +3,9 @@
 #include <unistd.h>
 #include "LearningAccess.h"
 #include "LearningCreat.h"
+#include "LearningChdir.h"
 #include "LearningChmod.h"
+#include "LearningDirent.h"
 #include "LearningGetcwd.h"
 #include "LearningLink.h"
 #include "LearningMkdir.h"
@@ -35,17 +37,19 @@ int main(int argc, const char * argv[]) {
         
         printf("Which function would you like to try? \
                \n(o)pen \
-               \t(c)reat \
+               \t\t(c)reat \
                \n(r)ead \
-               \t(w)rite \
+               \t\t(w)rite \
                \n(p)ermissions \
-               \t(a)ccess \
+               \t\t(a)ccess \
                \n(s)oft link \
-               \t(u)nlink \
+               \t\t(u)nlink \
                \n(l)ink \
-               \t(m)akedir \
+               \t\t(m)akedir \
                \n(d)elete dir \
-               \t(g)et cwd\n");
+               \t\t(g)et cwd \
+               \nc(h)dir \
+               \t\tdirlis(t)\n");
         scanf("%c", &functionChoice);
         getchar();
         
@@ -69,6 +73,10 @@ int main(int argc, const char * argv[]) {
             case 'g' :
                 printf("You chose to get the current working directory.\n");
                 rc = useGetcwd(); //Here rc is just a success or failure
+                break;
+            case 'h' :
+                printf("You chose to change the current working directory.\n");
+                rc = useChdir(filename); //Here rc is just a success or failure
                 break;
             case 'l' :
                 printf("You chose to create a soft link for a file.\n");
@@ -97,6 +105,10 @@ int main(int argc, const char * argv[]) {
             case 's' :
                 printf("You chose to create a soft link for a file.\n");
                 rc = useSymlink(filename); //Here rc is just a success or failure
+                break;
+            case 't' :
+                printf("You chose to list the directory entries.\n");
+                rc = useDirent(filename); //Here rc is just a success or failure
                 break;
             case 'u' :
                 printf("You chose to unlink a soft link for a file.\n");
