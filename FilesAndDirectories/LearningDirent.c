@@ -19,14 +19,21 @@ int useDirent(char *dirname)
     
     if (DIR_READER == NULL)
     {
-        printf("Could not open the directory you provided" );
+        printf("Could not open the directory you provided\n" );
         exit(1);
     }
     
     while ((DIR_ENTRY = readdir(DIR_READER)) != NULL)
         printf("%s\n", DIR_ENTRY->d_name);
     
-    closedir(DIR_READER);
+    //Make sure to close the directory stream
+    int status = closedir(DIR_READER);
+    
+    if(status == 0){
+           printf("Directory Closed Successfully!\n");
+       }else{
+           printf("Unable to close the Directory.\n");
+       }
     
     return 0;
     
